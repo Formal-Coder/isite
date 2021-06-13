@@ -1,60 +1,185 @@
-/*live letter counter modified by formal-coder*/
-
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-
+@import url("https://fonts.googleapis.com/css?family=Poppins");
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: poppins, sans-serif;
 }
+
 body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: auto;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+header{
+    margin: 5px;
+    border-radius: 10px;
+    letter-spacing: 20px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: rgba(31,231,37,0.2);
+}
+footer{
+    margin: 5px 400px 10px 400px;
+    border-radius: 10px;
+    padding: 10px 0 10px 0;
+    letter-spacing: 20px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: rgba(31,231,37,0.35);
+}
+header .toggle{
+    cursor: pointer;
+    user-select: none;
+}
+section{
+    width: 100%;
+    height: 300vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: auto;
+    align-items: auto;
+    box-sizing: border-box;
+}
+.s{
+    margin: 5px 0 5px 0;
+    border-radius: 20px;
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(to top left, #66ff99 0%, #ff99cc 100%);
-    /*background: #00FF7F;*/
 }
-.container{
-    width: 550px;
-    padding:40px;
-    /*background-color: #00FA9A;*/
-    background: linear-gradient(to top left, #66ff99 0%, #ff99cc 100%);
+#s1{
+    background: rgba(31,231,237,0.3)
+}
+#s2{
+    background: rgba(31,231,37,0.5)
+}
+#s3{
+    background: rgba(31,31,37,0.3)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.loading-screen{
+    width: 100%;
+    height: 100vh;
+    background-color: #d9b3ff;
+    position: fixed;
     display: flex;
-    flex-direction: column;
-    box-shadow: 0px 0px 35px rgba(31, 38, 135, 0.7);
-    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
 }
-.container h3{
-    font-size:2em;
-    margin-bottom:10px;
-    color: #333;
+.loading{
+    width: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    animation: rotate 5s linear infinite;
 }
-.container textarea{
-    position: relative;
-    margin-bottom: 20px;
-    /*resize: none;*/
-    width: 100% !important;
-    height: 100% ;
-    padding: 10px;
-    font-size: 18px;
-    border: none;
-    background: transparent;
-    border-radius: 5px;
-    box-shadow: 0px 0px 35px rgba(10,10,10,0.2);
-                                                                         
-    outline: none;
+@keyframes rotate{
+    to{
+        transform: rotate(360deg);
+    }
 }
-.container p{
-    display:flex;
-    align-items:center;
-    font-size:18px;
-    color: #333;
+.loading span{
+    width: 32px;
+    height: 32px;
+    background-color: red;
+    margin: 4px;
+    animation: scale 1.5s linear infinite;
 }
-.container p .count{
-    font-size: 22px;
-    color: grey;
-    font-weight: 600;
-    margin-left: 10px;
+@keyframes scale{
+    50%{
+        transform: scale(1.2);
+    }
 }
+.loading span:nth-child(1){
+    border-radius: 50% 50% 0 50%;
+    background-color: royalblue;
+    transform-origin: bottom right;
+    animation-delay: .5s;
+}
+.loading span:nth-child(2){
+    border-radius: 50% 50% 50% 0%;
+    background-color: aquamarine;
+    transform-origin: bottom left;
+    animation-delay: 1s;
+}
+.loading span:nth-child(3){
+    border-radius: 50% 0 50% 50%;
+    background-color: blueviolet;
+    transform-origin: top right;
+    animation-delay: 1.5s;
+}
+.loading span:nth-child(4){
+    border-radius: 0 50% 50% 50%;
+    background-color: tomato;
+    transform-origin: top left;
+    animation-delay: 2s;
+}
+*/
