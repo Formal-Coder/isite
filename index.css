@@ -10,7 +10,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: auto;
-    height: auto;
+    height: 100%;
     width: 100%;
     box-sizing: border-box;
 }
