@@ -2,102 +2,101 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: poppins, sans-serif;
 }
-html {
-      width: 100%;
-      height: 100%;
-      clip: auto;
-      position: absolute;
-      overflow: hidden;
-    }
-    
-    div {
-      width: 500vh;
-      height: 500vh;
-      position: absolute;
-      top: 65%;
-      left: -65%;
-      background-color: rgba(0,150,255,0.3);
-      animation-duration: 10s;
-      animation-name: example;
-      animation-iteration-count: infinite;
-      border-top-left-radius: 40%;
-      border-top-right-radius: 45%;
-      border-bottom-left-radius: 35%;
-      border-bottom-right-radius: 40%;
-    }
-    
-    @keyframes example {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
 body{
-    display: flex;
-    flex-direction: column;
-    align-items: auto;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.loading-screen{
     width: 100%;
     height: 100vh;
-    background-color: #d9b3ff;
-    position: fixed;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    background: rgba(102, 255, 180, 0.5);
 }
+.section1, .section2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.resistbackground{
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+}
+.background {
+    position: absolute;
+    top: 55%;
+    left: -65%;
+    width: 500vh;
+    height: 500vh;
+    background-color: rgba(0,170,255,0.4);
+
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    
+    border-top-left-radius: 40%;
+    border-top-right-radius: 45%;
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius: 40%;
+}
+    /*animation : name duration iteration-count*/
+    
+@keyframes example {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .loading{
-    width: 80px;
+    width: 160px;
     display: flex;
     flex-wrap: wrap;
-    animation: rotate 5s linear infinite;
+    animation: loading_rotate 5s linear infinite;
 }
-@keyframes rotate{
+@keyframes loading_rotate{
     to{
         transform: rotate(360deg);
     }
 }
 .loading span{
-    width: 32px;
-    height: 32px;
-    background-color: red;
+    width: 64px;
+    height: 64px;
     margin: 4px;
-    animation: scale 1.5s linear infinite;
+    animation: span_scale 1.5s linear infinite;
 }
-@keyframes scale{
+@keyframes span_scale{
     50%{
         transform: scale(1.2);
     }
 }
-.loading span:nth-child(1){
-    border-radius: 50% 50% 0 50%;
-    background-color: rgba(150, 0, 0, 0.3);
+#span1{
+    border-radius: 50% 50% 5% 50%;
+    background-color: rgba(150, 0, 0, 0.7);
     transform-origin: bottom right;
     animation-delay: .5s;
 }
-.loading span:nth-child(2){
-    border-radius: 50% 50% 50% 0%;
-    background-color: rgba(0, 150, 0, 0.3);
+#span2{
+    border-radius: 50% 50% 50% 5%;
+    background-color: rgba(0, 150, 0, 0.7);
     transform-origin: bottom left;
     animation-delay: 1s;
 }
-.loading span:nth-child(3){
-    border-radius: 50% 0 50% 50%;
-    background-color: rgba(0, 0, 150, 0.3);
+#span3{
+    border-radius: 50% 5% 50% 50%;
+    background-color: rgba(0, 0, 150, 0.7);
     transform-origin: top right;
     animation-delay: 1.5s;
 }
-.loading span:nth-child(4){
-    border-radius: 0 50% 50% 50%;
-    background-color: rgba(30,30,31, 0.5);
+#span4{
+    border-radius: 5% 50% 50% 50%;
+    background-color: rgba(30,30,31, 0.7);
     transform-origin: top left;
     animation-delay: 2s;
 }
