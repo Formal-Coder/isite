@@ -29,10 +29,10 @@ body{
 }
 .background {
     position: absolute;
-    top: 55%;
-    left: -65%;
-    width: 500vh;
-    height: 500vh;
+    top: 35%;
+    left: 15%;
+    width: 250vh;
+    height: 250vh;
     background-color: rgba(0,170,255,0.45);
 
     animation-name: example;
