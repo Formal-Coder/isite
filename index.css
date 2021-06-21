@@ -5,15 +5,16 @@
 }
 body{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
     background: rgba(102, 255, 180, 0.5);
 }
 .section1, .section2{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,10 +22,10 @@ body{
 }
 .resistbackground{
     width: 100%;
-    height: 60vh;
+    height: 60%;
     overflow: hidden;
     position: absolute;
-    top: 100%;
+    top: 40%;
 }
 .background {
     position: absolute;
@@ -32,7 +33,7 @@ body{
     left: -65%;
     width: 500vh;
     height: 500vh;
-    background-color: rgba(0,170,255,0.4);
+    background-color: rgba(0,170,255,0.45);
 
     animation-name: example;
     animation-duration: 10s;
