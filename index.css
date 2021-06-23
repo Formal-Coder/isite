@@ -70,6 +70,7 @@ body{
     width: 64px;
     height: 64px;
     margin: 4px;
+    box-shadow: 5px 5px rgba(100,100,100,0.4);
     animation: span_scale 1.5s linear infinite;
 }
 @keyframes span_scale{
