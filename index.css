@@ -10,7 +10,7 @@ body{
     min-height: 100vh;
     background: #ff5555;
 }
-.navigation{
+/*.navigation{
     width: 70px;
     position: fixed;
     top: 20px;
@@ -107,3 +107,4 @@ body{
 .navigation.active{
     width: 300px;
 }
+*/
