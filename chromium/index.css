@@ -1,0 +1,205 @@
+@import url("http://fonts.googleapis.com/css2?family=Poppins");
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+body{
+    min-height: 100vh;
+    background: #ff5555;
+}
+.section1, .section2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.resistbackground{
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    position: absolute;
+    top: 40%;
+}
+.background {
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    width: 250vh;
+    height: 250vh;
+    background-color: rgba(0,170,255,0.45);
+
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    
+    border-top-left-radius: 40%;
+    border-top-right-radius: 45%;
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius: 40%;
+}
+    /*animation : name duration iteration-count*/
+    
+@keyframes example {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading{
+    width: 145px;
+    display: flex;
+    flex-wrap: wrap;
+    animation: loading_rotate 5s infinite;
+}
+@keyframes loading_rotate{
+    from{
+        transform: rotate(-180deg);
+    }
+    to{
+        transform: rotate(180deg);
+    }
+}
+.loading span{
+    width: 64px;
+    height: 64px;
+    margin: 4px;
+    box-shadow: 5px 5px rgba(100,100,100,0.4);
+    animation: span_scale 1.5s linear infinite;
+}
+@keyframes span_scale{
+    50%{
+        transform: scale(1.2);
+    }
+}
+#span1{
+    border-radius: 50% 50% 5% 50%;
+    background-color: rgba(150, 0, 0, 0.7);
+    transform-origin: bottom right;
+    animation-delay: .5s;
+}
+#span2{
+    border-radius: 50% 50% 50% 5%;
+    background-color: rgba(0, 150, 0, 0.7);
+    transform-origin: bottom left;
+    animation-delay: 1s;
+}
+#span3{
+    border-radius: 50% 5% 50% 50%;
+    background-color: rgba(0, 0, 150, 0.7);
+    transform-origin: top right;
+    animation-delay: 1.5s;
+}
+#span4{
+    border-radius: 5% 50% 50% 50%;
+    background-color: rgba(30,30,31, 0.7);
+    transform-origin: top left;
+    animation-delay: 2s;
+}
+
+/*----------------------------------------------------------------*/
+
+.navigation{
+    width: 70px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+    background: #4d5bf9;
+    box-sizing: initial;
+    border-left: 5px solid #4d5bf9;
+    border-radius: 10px;
+    transition: width 0.5s;
+    overflow-x: hidden;
+    z-index: 3;
+}
+.navigation ul{
+    width: 100%;
+    position: absolute;
+    padding-left: 5px;
+    padding-top: 40px;
+    top: 0;
+    left: 0;
+}
+.navigation ul li{
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60x;
+    line-height: 60px;
+    text-align: center;
+    top: 5px;
+}
+.navigation ul li a .icon ion-icon{
+    font-size: 1.5em;
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: normal;
+}
+.navigation ul li.active{
+    background: #fff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}
+.navigation ul li.active a{
+    color: #333;
+}
+.toggle{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    font-size: 3em;
+    top: 20px;
+    right: 20px;
+    background: #4d5bf9;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.toggle ion-icon{
+    position: absolute;
+    color: #fff;
+    font-size: 34px;
+    display: none;
+}
+.toggle ion-icon.open, .toggle.active ion-icon.close{
+    display: block;
+}
+.toggle.active ion-icon.open, .toggle.open ion-icon.close{
+    display: none;
+}
+.toggle.active{
+    background: #ff5555;
+}
+.navigation.active{
+    width: 300px;
+}
