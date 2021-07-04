@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./sidebar_menu.css">
     <title>sidebar menu</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
                 </a>
             </li>
             <li class="list">
-                <a href="#profile">
+                <a href="https://www.linkedin.com/in/chakradharxd">
                     <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
                     <span class="title">Profile</span>
                 </a>
@@ -60,6 +60,7 @@
     </div>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
     <script>
         let list = document.querySelectorAll('.list');
         for (let i=0;i<list.length;i++){
@@ -72,6 +73,7 @@
             }
         }
     </script>
+    <div class="darkTheme"><ion-icon name="contrast"></ion-icon></div>
     
     <script>
         let menutoggle = document.querySelector('.toggle');
@@ -79,6 +81,12 @@
         menutoggle.onclick = function(){
             menutoggle.classList.toggle('active')
             navigation.classList.toggle('active')
+        }
+        let body = document.querySelector('body');
+        let darkTheme = document.querySelector('.darkTheme');
+        darkTheme.onclick = function(){
+            darkTheme.classList.toggle('active')
+            body.classList.toggle('active')
         }
     </script>
 </body>
