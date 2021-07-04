@@ -32,7 +32,7 @@ body{
     top: 0;
     left: 0;
 }
-.navigation ul li{
+/*.navigation ul li{
     width: 100%;
     list-style: none;
     position: relative;
