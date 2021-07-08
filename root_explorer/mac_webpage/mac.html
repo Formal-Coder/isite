@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mac.css">
+    <title>Mac Desktop</title>
+</head>
+<body>
+    <header>
+
+        <div class="left">
+            
+            <a href="sketch">
+                <span class="icon"><ion-icon name="pencil-outline"></ion-icon></span>
+            </a>
+            <a href="linkedin">
+                <span class="icon"><ion-icon name="logo-linkedin"></ion-icon></span>
+            </a>
+            <a href="whatsapp">
+                <span class="icon"><ion-icon name="logo-whatsapp"></ion-icon></span>
+            </a>
+            <a href="zoom">
+                <span class="icon"><ion-icon name="videocam-outline"></ion-icon></span>
+            </a>
+        </div>
+
+        <div class="center">
+            <b>9:41 AM</b>
+        </div>
+
+        <div class="right">
+            <a href="network">
+                <span class="icon"><ion-icon name="cellular"></ion-icon></span>
+            </a>
+            <a href="wifi">
+                <span class="icon"><ion-icon name="wifi-outline"></ion-icon></span>
+            </a>
+        <a href="battery">
+                <span class="icon"><ion-icon name="battery-half-outline"></ion-icon></span>
+            </a>
+        </div>
+
+    </header>
+
+    <section>
+        <a href="#apple">
+            <span class="icon"><ion-icon name="logo-apple"></ion-icon></ion-icon></span>
+        </a>
+    </section>
+
+    <div class="navigation">
+        <a href="#home">
+            <span class="icon"><ion-icon name="desktop-outline"></ion-icon></span>
+        </a>               
+        <a href="https://www.linkedin.com/in/chakradharxd">
+            <span class="icon"><ion-icon name="accessibility-outline"></ion-icon></span>
+        </a>        
+        <a href="#messages">
+            <span class="icon"><ion-icon name="chatbox-ellipses-outline"></ion-icon></ion-icon></span>
+        </a>
+        <a href="#help">
+            <span class="icon"><ion-icon name="logo-apple-appstore"></ion-icon></span>
+        </a>        
+        <a href="#setting">
+            <span class="icon"><ion-icon name="cog-outline"></ion-icon></span>
+        <a href="#password">
+            <span class="icon"><ion-icon name="finger-print-outline"></ion-icon></span>
+        </a>   
+        
+    </div>
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    <script>
+            <div  class="toggle">
+                <ion-icon class="open" name="menu-outline"></ion-icon>
+                <ion-icon class="close" name="close-circle-outline"></ion-icon>
+            </div>
+            <div class="darkTheme"><ion-icon name="contrast"></ion-icon></div>
+        let list = document.querySelectorAll('.list');
+        for (let i=0;i<list.length;i++){
+            list[i].onclick = function(){
+                let j = 0;
+                while (j<list.length){
+                    list[j++].className = 'list';
+                }
+                list[i].className = 'list active';
+            }
+        }
+    </script>
+    
+    
+    <script>
+        let menutoggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation')
+        menutoggle.onclick = function(){
+            menutoggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+        let body = document.querySelector('body');
+        let darkTheme = document.querySelector('.darkTheme');
+        darkTheme.onclick = function(){
+            darkTheme.classList.toggle('active')
+            body.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
