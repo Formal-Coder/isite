@@ -146,11 +146,13 @@ body.active{
     left: 88vw;
     transition: 0.5s;
     border: 2px solid #cc2b5e;
+    transform: translateY(120px);
 }
 .container:hover{
     height: 130px;
     display: flex;
     background: linear-gradient(#cc2b5e, #753a88);
+    transform: translateY(5px);
 }
 .container ul li{
     list-style: none;
