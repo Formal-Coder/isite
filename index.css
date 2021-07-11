@@ -8,7 +8,7 @@
 }
 body{
     min-height: 100vh;
-    background: #cc2b5e;
+    background: linear-gradient(#cc2b5e, #753a88);
 }
 .navigation{
     width: 70px;
@@ -128,10 +128,10 @@ body{
     background: #cc2b5e;
 }
 body.active{
-    width: 20px;
     background: rgba(4, 7, 7, 1.0);
 }
-/*external */
+
+/*toggle*/
 .container{
     width: 40px;
     height: 20px;
