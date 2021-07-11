@@ -1,104 +1,164 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./sidebar_menu.css">
-    <title>sidebar menu</title>
-</head>
-<body>
-    <div class="navigation">
-        <ul>
-            <li class="list active">
-                <a href="#home">
-                    <span class="icon"><ion-icon name="home"></ion-icon></ion-icon></span>
-                    <span class="title">Home</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="https://www.linkedin.com/in/chakradharxd">
-                    <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
-                    <span class="title">Profile</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="#messages">
-                    <span class="icon"><ion-icon name="chatbox-ellipses-outline"></ion-icon></ion-icon></span>
-                    <span class="title">Messages</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="#setting">
-                    <span class="icon"><ion-icon name="options-outline"></ion-icon></span>
-                    <span class="title">Setting</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="#help">
-                    <span class="icon"><ion-icon name="information-circle-outline"></span>
-                    <span class="title">Help</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="#password">
-                    <span class="icon"><ion-icon name="finger-print-outline"></ion-icon></span>
-                    <span class="title">Password</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="#signout">
-                    <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
-                    <span class="title">Signout</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div class="circle-container">
-        <div class="circle1"></div>
-        <div class="circle2"></div>
-        <div class="circle1"></div>
-        <div class="circle2"></div>
-        <div class="circle1"></div>
-        <div class="circle2"></div>
-        <div class="circle1"></div>
-        <div class="circle2"></div>
-    </div>
-    
-    
-    <div class="container">
-        <ul>
-            <li><a href="root_explorer/windows/windows.html">   Windows</a></li>
-            <li><a href="root_explorer/mac_webpage/mac.html">   Mac</a></li>
-            <li><a href="root_explorer/kali%20linux/kali.html"> Kali linux</a></li>
-            <li><a href="root_explorer/ubuntu%20linux/ubuntu.html"> Ubuntu linux</a></li>
-        </ul>
-    </div>
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+body{
+    min-height: 100vh;
+    background: linear-gradient(75deg, #2193b0, #6dd5ed);
+}
+.circle-container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1000;
+}
+.circle1{
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+.circle2{
+    width: 120px;
+    height: 120px;
+    background: #ffffff;
+    border-radius: 50%;
+    opacity: 0.5;
+    position: relative;
+    left: 20px;
+}
+.navigation{
+    width: 70px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+    background: rgba(51, 51, 51, 0.3);
+    box-sizing: initial;
+    border-left: 5px solid rgba(80, 80, 80, 0.4);
+    border-radius: 10px;
+    transition: width 0.5s;
+    overflow-x: hidden;
+    box-shadow: 0 8px 32px 0 #000;
+}
+.navigation:hover{
+    width: 275px;
+    background: #753a88;
+    opacity: 0.95;
+    z-index: 2;
+}
+.navigation ul{
+    width: 100%;
+    position: absolute;
+    padding-left: 5px;
+    padding-top: 40px;
+    top: 0;
+    left: 0;
+}
+.navigation ul li{
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60x;
+    line-height: 60px;
+    text-align: center;
+    top: 5px;
+}
+.navigation ul li a .icon ion-icon{
+    font-size: 1.5em;
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: normal;
+}
+.navigation ul li.active{
+    background: #fff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    
-    <script>
-        let list = document.querySelectorAll('.list');
-        for (let i=0;i<list.length;i++){
-            list[i].onclick = function(){
-                let j = 0;
-                while (j<list.length){
-                    list[j++].className = 'list';
-                }
-                list[i].className = 'list active';
-            }
-        }
-    </script>
-    <div class="darkTheme"><ion-icon name="contrast"></ion-icon></div>
-    
-    <script>
-        let body = document.querySelector('body');
-        let darkTheme = document.querySelector('.darkTheme');
-        darkTheme.onclick = function(){
-            darkTheme.classList.toggle('active')
-            body.classList.toggle('active')
-        }
-    </script>
-</body>
-</html>
+}
+.navigation ul li.active a{
+    color: #333;
+}
+.darkTheme{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 20px;
+    top: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.darkTheme ion-icon{
+    font-size: 2rem;
+}
+.darkTheme.active{
+    background: #cc2b5e;
+}
+body.active{
+    background: rgba(4, 7, 7, 1.0);
+}
+
+/*toggle*/
+.container{
+    width: 40px;
+    height: 20px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    top: 78vh;
+    left: 88vw;
+    transition: 0.5s;
+    border: 2px solid #cc2b5e;
+    transform: translateX(100px) translateY(120px);
+}
+.container:hover{
+    height: 130px;
+        width: 150px;
+    display: flex;
+    background: #000;
+    transform: translateY(5px);
+}
+.container ul li{
+    list-style: none;
+    text-decoration: none;
+    transition: .5s;
+}
+.container ul li a{
+    text-decoration: none;
+    color: WHITE;
+}
+
+.container ul li:hover, .container ul li:hover a{
+    transform: translateX(10px);
+}
