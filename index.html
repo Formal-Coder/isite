@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>user_WebPage</title>
+    <link rel="stylesheet" href="./sidebar_menu.css">
+    <title>sidebar menu</title>
 </head>
 <body>
     <div class="navigation">
@@ -54,19 +54,27 @@
             </li>
         </ul>
     </div>
-    <div  class="toggle">
-        <ion-icon class="open" name="menu-outline"></ion-icon>
-        <ion-icon class="close" name="close-circle-outline"></ion-icon>
+    <div class="circle-container">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
     </div>
-
-     <div class="container">
+    
+    
+    <div class="container">
         <ul>
-            <li><a href="root_explorer/windows/windows.html">Windows</a></li>
-            <li><a href="root_explorer/mac_webpage/mac.html">Mac</a></li>
-            <li><a href="root_explorer/kali%20linux/kali.html">Kali linux</a></li>
-            <li><a href="root_explorer/ubuntu%20linux/ubuntu.html">Ubuntu linux</a></li>
+            <li><a href="root_explorer/windows/windows.html">   Windows</a></li>
+            <li><a href="root_explorer/mac_webpage/mac.html">   Mac</a></li>
+            <li><a href="root_explorer/kali%20linux/kali.html"> Kali linux</a></li>
+            <li><a href="root_explorer/ubuntu%20linux/ubuntu.html"> Ubuntu linux</a></li>
         </ul>
     </div>
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
@@ -85,12 +93,6 @@
     <div class="darkTheme"><ion-icon name="contrast"></ion-icon></div>
     
     <script>
-        let menutoggle = document.querySelector('.toggle');
-        let navigation = document.querySelector('.navigation')
-        menutoggle.onclick = function(){
-            menutoggle.classList.toggle('active')
-            navigation.classList.toggle('active')
-        }
         let body = document.querySelector('body');
         let darkTheme = document.querySelector('.darkTheme');
         darkTheme.onclick = function(){
