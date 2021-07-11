@@ -133,7 +133,7 @@ body.active{
 
 /*toggle*/
 .container{
-    width: 40px;
+    width: 150px;
     height: 20px;
     background: transparent;
     display: flex;
@@ -148,7 +148,6 @@ body.active{
     border: 2px solid #cc2b5e;
 }
 .container:hover{
-    width: 150px;
     height: 130px;
     display: flex;
     background: linear-gradient(#cc2b5e, #753a88);
@@ -160,7 +159,7 @@ body.active{
 }
 .container ul li a{
     text-decoration: none;
-    color: transparent;
+    color: BLACK;
 }
 
 .container ul li:hover, .container ul li:hover a{
