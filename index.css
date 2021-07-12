@@ -14,12 +14,6 @@ body{
     justify-content: center;
 }
 
-.text{
-    width: fit-content;
-    height: fit-content;
-    font-stretch: 2;
-    font-size: 2.4em;
-}
 .circle-container{
     width: 100%;
     height: 100%;
