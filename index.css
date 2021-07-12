@@ -21,14 +21,14 @@ body{
     position: absolute;
     z-index: -1000;
 }
-.circle1{
+.circle-container .circle1{
     width: 60px;
     height: 60px;
     background: #ffffff;
     border-radius: 50%;
     opacity: 0.9;
 }
-.circle2{
+.circle-container .circle2{
     width: 120px;
     height: 120px;
     background: #ffffff;
@@ -37,108 +37,258 @@ body{
     position: relative;
     left: 20px;
 }
-.navigation{
-    width: 70px;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    bottom: 20px;
-    background: rgba(51, 51, 51, 0.3);
-    box-sizing: initial;
-    border-left: 5px solid rgba(80, 80, 80, 0.4);
-    border-radius: 10px;
-    transition: width 0.5s;
-    overflow-x: hidden;
-    box-shadow: 0 8px 32px 0 #000;
-}
-.navigation:hover{
-    width: 275px;
-    background: rgba(51, 51, 51, 0.8);
-    z-index: 2;
-}
-.navigation ul{
-    width: 100%;
+.circle-container .circle3{
+    width: 300px;
+    height: 300px;
+    background: #ffffff;
     position: absolute;
-    padding-left: 5px;
-    padding-top: 40px;
-    top: 0;
-    left: 0;
+    border-radius: 50%;
+    opacity: 0.5;
+    left: 30%;
+    top: 30%;
 }
-.navigation ul li{
-    width: 100%;
-    list-style: none;
-    position: relative;
-}
-.navigation ul li a{
-    position: relative;
-    display: block;
-    width: 100%;
+.circle-container .circle4{
+    width: 350px;
+    height: 350px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
     display: flex;
-    text-decoration: none;
-    color: white;
+    flex-wrap: wrap;
+    opacity: 0.5;
+    left: 60%;
+    top: 10%;
 }
-.navigation ul li a .icon{
+.circle-container .circle4 h1{
     position: relative;
-    display: block;
-    min-width: 60px;
-    height: 60x;
-    line-height: 60px;
+    top: 35%;
     text-align: center;
-    top: 5px;
+    flex-wrap: wrap;
 }
-.navigation ul li a .icon ion-icon{
-    font-size: 1.5em;
-}
-.navigation ul li a .title{
+.circle-container .circle3 .circle1{
     position: relative;
-    display: block;
-    padding-left: 10px;
-    height: 60px;
-    line-height: 60px;
-    white-space: normal;
+    left: -50%;
 }
-.navigation ul li.active{
-    background: #fff;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+.circle-container .circle3 h1{
+    position: relative;
+    top: 20%;
+    text-align: center;
+}
+.circle-container .circle3 .circle2{
+    position: relative;
+    left: 150%;
+}
+@media (min-width: 673px){
+    
+    .navigation{
+        width: 70px;
+        background: rgba(51, 51, 51, 0.3);
+        box-sizing: initial;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        bottom: 20px;
+        border-left: 5px solid rgba(80, 80, 80, 0.4);
+        border-radius: 10px;
+        box-shadow: 0 8px 32px #000;
+        overflow-x: hidden;
+        transition: width 0.5s;
+    }
+    .navigation:hover{
+        width: 275px;
+        background: rgba(51, 51, 51, 0.8);
+        z-index: 2;
+    }
+    .navigation ul{
+        width: 100%;
+        position: absolute;
+        padding-left: 5px;
+        padding-top: 40px;
+        top: 0;
+        left: 0;
+    }
+    .navigation ul li{
+        width: 100%;
+        list-style: none;
+        position: relative;
+    }
+    .navigation ul li a{
+        position: relative;
+        display: block;
+        width: 100%;
+        display: flex;
+        text-decoration: none;
+        color: white;
+    }
+    .navigation ul li a .icon{
+        position: relative;
+        display: block;
+        min-width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        top: 5px;
+    }
+    .navigation ul li a .icon ion-icon{
+        font-size: 1.5em;
+    }
+    .navigation ul li a .title{
+        position: relative;
+        display: block;
+        padding-left: 10px;
+        height: 60px;
+        line-height: 60px;
+        white-space: normal;
+    }
+    .navigation ul li.active{
+        background: #fff;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
 
-}
-.navigation ul li.active a{
-    color: #333;
-}
-body.active{
-    background: rgba(4, 7, 7, 1.0);
-}
+    }
+    .navigation ul li.active a{
+        color: #333;
+    }
+    body.active{
+        background: rgba(4, 7, 7, 1.0);
+    }
 
-/*toggle*/
-.container{
-    height: 130px;
-    width: 150px;
-    background: rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    overflow: hidden;
-    position: absolute;
-    top: calc(50% - 30px);
-    transition: 0.3s;
-    border: 2px dotted #cc2b5e;
-    transform: scale(2.0);
-}
-.container:hover{
-    display: flex;
-}
-.container ul li{
-    list-style: none;
-    text-decoration: none;
-    transition: .5s;
-}
-.container ul li a{
-    text-decoration: none;
-    color: WHITE;
-}
+    /*toggle*/
+    .container{
+        height: 130px;
+        width: 150px;
+        background: rgba(255, 255, 255, 0.05);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        overflow: hidden;
+        position: absolute;
+        top: calc(50% - 30px);
+        transition: 0.3s;
+        border: 2px dotted #cc2b5e;
+        transform: scale(2.0);
+    }
+    .container:hover{
+        display: flex;
+    }
+    .container ul li{
+        list-style: none;
+        text-decoration: none;
+        transition: .5s;
+    }
+    .container ul li a{
+        text-decoration: none;
+        color: WHITE;
+    }
 
-.container ul li:hover, .container ul li:hover a{
-    transform: translateX(10px);
+    .container ul li:hover, .container ul li:hover a{
+        transform: translateX(10px);
+    }
+}
+@media (max-width: 673px){
+    .navigation{
+        width: 70px;
+        background: rgba(51, 51, 51, 0.3);
+        box-sizing: initial;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        bottom: 20px;
+        border-left: 5px solid rgba(80, 80, 80, 0.4);
+        border-radius: 10px;
+        box-shadow: 0 8px 32px #000;
+        overflow-x: hidden;
+        transition: width 0.5s;
+    }
+    .navigation:hover{
+        width: 275px;
+        background: rgba(51, 51, 51, 0.8);
+        z-index: 2;
+    }
+    .navigation ul{
+        width: 100%;
+        position: absolute;
+        padding-left: 5px;
+        padding-top: 40px;
+        top: 0;
+        left: 0;
+    }
+    .navigation ul li{
+        width: 100%;
+        list-style: none;
+        position: relative;
+    }
+    .navigation ul li a{
+        position: relative;
+        display: block;
+        width: 100%;
+        display: flex;
+        text-decoration: none;
+        color: white;
+    }
+    .navigation ul li a .icon{
+        position: relative;
+        display: block;
+        min-width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        top: 5px;
+    }
+    .navigation ul li a .icon ion-icon{
+        font-size: 1.5em;
+    }
+    .navigation ul li a .title{
+        position: relative;
+        display: block;
+        padding-left: 10px;
+        height: 60px;
+        line-height: 60px;
+        white-space: normal;
+    }
+    .navigation ul li.active{
+        background: #fff;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+
+    }
+    .navigation ul li.active a{
+        color: #333;
+    }
+    body.active{
+        background: rgba(4, 7, 7, 1.0);
+    }
+
+    /*toggle*/
+    .container{
+        height: 130px;
+        width: 150px;
+        background: rgba(255, 255, 255, 0.05);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        overflow: hidden;
+        position: absolute;
+        top: calc(50% - 30px);
+        transition: 0.3s;
+        border: 2px dotted #cc2b5e;
+        transform: scale(0.7);
+    }
+    .container:hover{
+        display: flex;
+    }
+    .container ul li{
+        list-style: none;
+        text-decoration: none;
+        transition: .5s;
+    }
+    .container ul li a{
+        text-decoration: none;
+        color: WHITE;
+    }
+    .container ul li:hover, .container ul li:hover a{
+        transform: translateX(10px);
+    }
 }
