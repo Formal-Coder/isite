@@ -259,7 +259,7 @@ body{
         position: absolute;
         border-radius: 50%;
         opacity: 0.5;
-        left: 15%;
+        left: 5%;
         top: 25%;
         transform: scale(0.6);
     }
