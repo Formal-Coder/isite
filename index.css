@@ -260,7 +260,7 @@ body{
         border-radius: 50%;
         opacity: 0.5;
         left: 25%;
-        top: 45%;
+        top: 35%;
         transform: scale(0.6);
     }
     .circle-container .circle4{
@@ -273,7 +273,7 @@ body{
         flex-wrap: wrap;
         opacity: 0.5;
         left: 30%;
-        bottom: 20%;
+        top: 0%;
         transform: scale(0.6);
     }
     .circle-container .circle4 h1{
@@ -289,12 +289,14 @@ body{
     }
     .circle-container .circle3 .circle1{
         position: relative;
-        left: -50%;
+        left: -30%;
+        top: 40%;
         transform: scale(0.6);
     }
     .circle-container .circle3 .circle2{
         position: relative;
-        left: 150%;
+        left: 50%;
+        top: 80%;
         transform: scale(0.6);
     }
 }
