@@ -13,6 +13,36 @@ body{
     display: flex;
     justify-content: center;
 }
+
+.picture{
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50%;
+    right: 0px;
+    overflow: hidden;
+    border: 5px solid #2193b0;
+    transform: scale(0.5);
+}
+.head{
+    width: 100px;
+    height: 100px;
+    background: #2193b0;
+    border-radius: 50%;
+}
+.body{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    background: linear-gradient(75deg, #2193b0, #6dd5ed);
+    border-radius: 50%;
+    top: 39.09%;
+    border: 2px solid #000;
+}
+
 .text{
     width: fit-content;
     height: fit-content;
@@ -58,8 +88,7 @@ body{
 }
 .navigation:hover{
     width: 275px;
-    background: #006699;
-    opacity: 0.95;
+    background: rgba(51, 51, 51, 0.8);
     z-index: 2;
 }
 .navigation ul{
@@ -118,25 +147,22 @@ body.active{
 
 /*toggle*/
 .container{
-    width: 40px;
-    height: 20px;
-    background: #fff;
+    height: 130px;
+    width: 150px;
+    background: rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 15px;
     overflow: hidden;
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    top: calc(50% - 30px);
     transition: 0.3s;
-    border: 2px solid #cc2b5e;
+    border: 2px dotted #cc2b5e;
+    transform: scale(2.0);
 }
 .container:hover{
-    height: 130px;
-    width: 150px;
     display: flex;
-    background: #000;
 }
 .container ul li{
     list-style: none;
