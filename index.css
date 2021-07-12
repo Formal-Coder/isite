@@ -259,8 +259,8 @@ body{
         position: absolute;
         border-radius: 50%;
         opacity: 0.5;
-        left: 5%;
-        top: 25%;
+        left: 25%;
+        top: 45%;
         transform: scale(0.6);
     }
     .circle-container .circle4{
