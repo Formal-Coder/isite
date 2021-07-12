@@ -14,72 +14,72 @@ body{
     justify-content: center;
 }
 
-.circle-container{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1000;
-}
-.circle-container .circle1{
-    width: 60px;
-    height: 60px;
-    background: #ffffff;
-    border-radius: 50%;
-    opacity: 0.9;
-}
-.circle-container .circle2{
-    width: 120px;
-    height: 120px;
-    background: #ffffff;
-    border-radius: 50%;
-    opacity: 0.5;
-    position: relative;
-    left: 20px;
-}
-.circle-container .circle3{
-    width: 300px;
-    height: 300px;
-    background: #ffffff;
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.5;
-    left: 30%;
-    top: 30%;
-}
-.circle-container .circle4{
-    width: 350px;
-    height: 350px;
-    background: #ffffff;
-    position: absolute;
-    border-radius: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    opacity: 0.5;
-    left: 60%;
-    top: 10%;
-}
-.circle-container .circle4 h1{
-    position: relative;
-    top: 35%;
-    text-align: center;
-    flex-wrap: wrap;
-}
-.circle-container .circle3 .circle1{
-    position: relative;
-    left: -50%;
-}
-.circle-container .circle3 h1{
-    position: relative;
-    top: 20%;
-    text-align: center;
-}
-.circle-container .circle3 .circle2{
-    position: relative;
-    left: 150%;
-}
+
 @media (min-width: 673px){
-    
+    .circle-container{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1000;
+    }
+    .circle-container .circle1{
+        width: 60px;
+        height: 60px;
+        background: #ffffff;
+        border-radius: 50%;
+        opacity: 0.9;
+    }
+    .circle-container .circle2{
+        width: 120px;
+        height: 120px;
+        background: #ffffff;
+        border-radius: 50%;
+        opacity: 0.5;
+        position: relative;
+        left: 20px;
+    }
+    .circle-container .circle3{
+        width: 300px;
+        height: 300px;
+        background: #ffffff;
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.5;
+        left: 30%;
+        top: 30%;
+    }
+    .circle-container .circle4{
+        width: 350px;
+        height: 350px;
+        background: #ffffff;
+        position: absolute;
+        border-radius: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.5;
+        left: 60%;
+        top: 10%;
+    }
+    .circle-container .circle4 h1{
+        position: relative;
+        top: 35%;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    .circle-container .circle3 .circle1{
+        position: relative;
+        left: -50%;
+    }
+    .circle-container .circle3 h1{
+        position: relative;
+        top: 20%;
+        text-align: center;
+    }
+    .circle-container .circle3 .circle2{
+        position: relative;
+        left: 150%;
+    }
     .navigation{
         width: 70px;
         background: rgba(51, 51, 51, 0.3);
@@ -151,39 +151,6 @@ body{
     }
     body.active{
         background: rgba(4, 7, 7, 1.0);
-    }
-
-    /*toggle*/
-    .container{
-        height: 130px;
-        width: 150px;
-        background: rgba(255, 255, 255, 0.05);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 15px;
-        overflow: hidden;
-        position: absolute;
-        top: calc(50% - 30px);
-        transition: 0.3s;
-        border: 2px dotted #cc2b5e;
-        transform: scale(2.0);
-    }
-    .container:hover{
-        display: flex;
-    }
-    .container ul li{
-        list-style: none;
-        text-decoration: none;
-        transition: .5s;
-    }
-    .container ul li a{
-        text-decoration: none;
-        color: WHITE;
-    }
-
-    .container ul li:hover, .container ul li:hover a{
-        transform: translateX(10px);
     }
 }
 @media (max-width: 673px){
@@ -260,35 +227,74 @@ body{
         background: rgba(4, 7, 7, 1.0);
     }
 
-    /*toggle*/
-    .container{
-        height: 130px;
-        width: 150px;
-        background: rgba(255, 255, 255, 0.05);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 15px;
-        overflow: hidden;
+    .circle-container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1000;
+    }
+    .circle-container .circle1{
+        width: 60px;
+        height: 60px;
+        background: #ffffff;
+        border-radius: 50%;
+        opacity: 0.9;
+        transform: scale(0.6);
+    }
+    .circle-container .circle2{
+        width: 120px;
+        height: 120px;
+        background: #ffffff;
+        border-radius: 50%;
+        opacity: 0.5;
+        position: relative;
+        left: 20px;
+        transform: scale(0.6);
+    }
+    .circle-container .circle3{
+        width: 250px;
+        height: 250px;
+        background: #ffffff;
         position: absolute;
-        top: calc(50% - 30px);
-        transition: 0.3s;
-        border: 2px dotted #cc2b5e;
-        transform: scale(0.7);
+        border-radius: 50%;
+        opacity: 0.5;
+        left: 15%;
+        top: 35%;
+        transform: scale(0.6);
     }
-    .container:hover{
+    .circle-container .circle4{
+        width: 300px;
+        height: 300px;
+        background: #ffffff;
+        position: absolute;
+        border-radius: 50%;
         display: flex;
+        flex-wrap: wrap;
+        opacity: 0.5;
+        left: 30%;
+        bottom: 20%;
+        transform: scale(0.6);
     }
-    .container ul li{
-        list-style: none;
-        text-decoration: none;
-        transition: .5s;
+    .circle-container .circle4 h1{
+        position: relative;
+        top: 35%;
+        text-align: center;
+        flex-wrap: wrap;
     }
-    .container ul li a{
-        text-decoration: none;
-        color: WHITE;
+    .circle-container .circle3 h1{
+        position: relative;
+        top: 20%;
+        text-align: center;
     }
-    .container ul li:hover, .container ul li:hover a{
-        transform: translateX(10px);
+    .circle-container .circle3 .circle1{
+        position: relative;
+        left: -50%;
+        transform: scale(0.6);
+    }
+    .circle-container .circle3 .circle2{
+        position: relative;
+        left: 150%;
+        transform: scale(0.6);
     }
 }
