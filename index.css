@@ -30,8 +30,12 @@
     transform: scale(1.2) translateX(-60%);
     z-index: 10;
 }
-
-@media (min-width: 673px and max-width:1368px){
+@media (min-width: 1370px){
+    body{
+        display: none;
+    }
+}
+@media (min-width: 673px) and (max-width:1370px){
     body{
         width: 100%;
         height: 100%;
