@@ -42,6 +42,7 @@
         background: orange;
         display: flex;
         justify-content: center;
+        font-family: Poppins, sans-serif;
         align-items: center;
         position: absolute;
         overflow: hidden;
@@ -204,6 +205,7 @@
         height: 100%;
         background: deepskyblue;
         display: flex;
+        font-family: Poppins, sans-serif;
         justify-content: center;
         align-items: center;
         position: absolute;
