@@ -114,7 +114,6 @@ body.active{
 }
 .navigation.active:hover{
     transition: 0.5s;
-    background: rgba(255, 255, 255, 0.8);
     box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.79);
     transform: scale(1.17);
 }
@@ -130,6 +129,9 @@ section.active:hover a .icon ion-icon{
     color: rgba(255, 255, 255, 0.6);
     transition: 0.5s;
     font-size: 14em;
+}
+section.active:hover a .icon ion-icon:hover{
+    color: black;
 }
 @media (max-height){
     
