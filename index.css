@@ -190,6 +190,9 @@ body{
     }
 }
 @media (max-width: 673px){
+    body{
+        background: darkorange;
+    }
     .list-container{
         display: none;
     }
