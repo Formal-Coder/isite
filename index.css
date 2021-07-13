@@ -45,8 +45,6 @@ body{
         left: 45%;
     }
     .circle-container{
-        width: calc(100%);
-        height: calc(100%);
         overflow: hidden;
         position: absolute;
         z-index: -1000;
