@@ -45,7 +45,6 @@
 	}
 			.list-container{
 				width: 250px;
-				height: 90vh;
 				background: transparent;
 				position: absolute;
 				right: 15%;
@@ -57,12 +56,13 @@
 				color: inherit;
 			}
 			.home{
-			    height: 130px;
+			    height: 125px;
 			    background: rgba(255, 255, 255, 0.3);
 			    position: relative;
 			    transform: skewX(10deg) scale(0.9);
 			    border-radius: 5%;
 			    transition: 0.3s;
+				top: 20px;
 			    left: 50%;
 			    display: flex;
 			    justify-content: center;
