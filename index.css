@@ -309,7 +309,7 @@
 					}
 }
 
-@media (max-width: 673px), (max-height: 673px){/*mobile_devices*/
+@media (max-width: 673px){/*mobile_devices*/
     body{
         width: 100%;
         height: 100%;
