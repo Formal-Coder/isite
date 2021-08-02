@@ -59,7 +59,7 @@
 			    height: 125px;
 			    background: rgba(255, 255, 255, 0.3);
 			    position: relative;
-			    transform: skewX(15deg) scale(0.85);
+			    transform: skewX(10deg) scale(0.85);
 			    border-radius: 5%;
 			    transition: 0.3s;
 				top: 20px;
