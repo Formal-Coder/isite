@@ -158,7 +158,7 @@
 			}
 			.desktop-navigation{
 				width: 70px;
-				background: rgba(51, 51, 51, 0.35);
+				background: rgba(51, 51, 51, 0.8);
 				box-sizing: initial;
 				position: fixed;
 				top: 20px;
@@ -172,7 +172,6 @@
 			}
 					.desktop-navigation:hover{
 						width: 275px;
-						background: rgba(51, 51, 51, 0.8);
 						z-index: 2;
 					}
 					.desktop-navigation ul{
