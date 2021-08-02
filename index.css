@@ -394,7 +394,6 @@
 						    }
 			.desktop-navigation, .circle-background, .list-container, .contact-form{
 				display: none;
-				visibility: hidden;
 			}
 			.hint{
 				height: 20px;
