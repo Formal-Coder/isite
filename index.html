@@ -44,7 +44,6 @@
         <h2> live stream music</h2>
     </div>
     <div class="about" id="about">
-        
         <h1>Reach linkedin for now</h1>
         <div class="linkedin">
             <a href="https://www.linkedin.com/in/chakradharxd">
@@ -52,6 +51,7 @@
             </a>
         </div>
     </div>
+
     <section class="contact-form">
         <div class="contact" id="contact">
             <form action="contact-form.php" method="post">
@@ -125,7 +125,7 @@
                 </a>
             </li>
             <li class="list">
-                <a href="#godark" class="darkTheme">
+                <a href="#godark" class="android_darkTheme">
                     <span class="icon"><ion-icon name="contrast"></ion-icon></span>
                     <span class="title">Go dark</span>
                 </a>
@@ -173,7 +173,7 @@
                     </a>
                 </li>
                 <li class="list">
-                    <a href="#godark" class="darkTheme">
+                    <a href="#godark" class="desktop_darkTheme">
                         <span class="icon"><ion-icon name="contrast"></ion-icon></span>
                         <span class="title">Go dark</span>
                     </a>
@@ -196,16 +196,20 @@
         for (let i=0;i<list.length;i++){
             list[i].onclick = function(){
                 let j = 0;
-                while (j<list.length){
+                    while (j<list.length){
                     list[j++].className = 'list';
                 }
                 list[i].className = 'list active';
             }
         }
-        
+
         let body = document.querySelector('body');
-        let darkTheme = document.querySelector(".darkTheme");
-        darkTheme.onclick = function(){
+        let darkTheme1 = document.querySelector(".android_darkTheme");
+        let darkTheme2 = document.querySelector(".desktop_darkTheme");
+        darkTheme1.onclick = function(){
+            body.classList.toggle('active')
+        }
+        darkTheme2.onclick = function(){
             body.classList.toggle('active')
         }
     </script>
