@@ -38,7 +38,7 @@
 @media (min-width: 673px){/*desktop_devices*/
     body{
     	--card: rgba(0,0,0,0.5);
-    	--white: rgba(255,255,255,0.2);
+    	--white: rgba(255,255,255,0.4);
     	--black: rgba(4, 7, 7, 0.6);
     	--yellow: #F2E22E;
     	--orange: #FF590D;
@@ -248,6 +248,31 @@
 												white-space: normal;
 												color: black;
 											}
+
+					body.active .desktop-navigation:hover, body.active .desktop-navigation{
+						background: black;
+					}
+					body.active .desktop-navigation ul li a .title, body.active .desktop-navigation ul li a .icon ion-icon{
+						color: var(--orange);
+					}
+					body.active .desktop-navigation ul li.active a .title{
+						background: var(--orange);
+						color: var(--yellow);
+					}
+					body.active .desktop-navigation ul li.active a .icon ion-icon, body.active .desktop-navigation ul li.active a .icon{
+						background: var(--orange);
+						color: var(--yellow);
+					}
+					body.active .desktop-navigation ul li.active a{
+						background: var(--orange);
+						color: var(--yellow);
+					}
+					body.active .desktop-navigation h1{
+						color: var(--orange);
+					}
+					body.active .about, body.active .about ion-icon{
+						color: var(--orange);
+					}
 					.desktop-navigation ul li.active a{
 						color: #333;
 					}
@@ -342,6 +367,12 @@
 					.fmplayer h1{
 						margin: 20px;
 						font-size: 3.5em;
+						color: var(--orange);
+
+					}
+					.fmplayer h2{
+						margin: 20px;
+						color: black;
 					}
 			.about{
 				display: flex;
