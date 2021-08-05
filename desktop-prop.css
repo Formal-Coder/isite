@@ -12,8 +12,7 @@ d@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,60
 }
 @font-face{
 	font-family: "SFPro";
-	src: url("SFProDisplay-Regular.ttf");
-
+	src: url("root_explorer/SFProDisplay-Regular.ttf");
 }
 ::-webkit-scrollbar {
     width: 12px;
