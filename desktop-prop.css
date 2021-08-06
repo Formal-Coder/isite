@@ -1,4 +1,4 @@
-d@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:200,300,400,500,600,700,800,900&display=swap');
 
 *{
@@ -12,7 +12,8 @@ d@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,60
 }
 @font-face{
 	font-family: "SFPro";
-	src: url("root_explorer/SFProDisplay-Regular.ttf");
+	src: url("SFProDisplay-Regular.ttf");
+
 }
 ::-webkit-scrollbar {
     width: 12px;
@@ -34,11 +35,11 @@ d@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,60
 .desktop-navigation::-webkit-scrollbar{
 	display: none
 }
-@media (min-width: 673px){/*desktop_devices*/
+@media  (min-width: 673px){/*desktop_devices*/
     body{
     	--card: rgba(0,0,0,0.5);
-    	--white: rgba(255,255,255,0.4);
-    	--black: rgba(4, 7, 7, 0.6);
+    	--white: rgba(255,255,255,0.6);
+    	--black: rgba(25, 25, 25, 0.6);
     	--yellow: #F2E22E;
     	--orange: #FF590D;
     	--green: #00FFD4;
@@ -81,15 +82,10 @@ d@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,60
 			    align-items: center;
 			    justify-content: center;
 			}
-			.list-container a h1{
-				font-size: 2.2em;
-				font-weight: 600;
-				color: var(--yellow);
-			}
 			.home{
 				width: 250px;
 			    height: 125px;
-			    background: var(--orange);
+			    background: var(--yellow);
 			    color: white;
 			    font-family: Poppins, sans-serif;
 			    border-radius: 5px;
@@ -100,8 +96,34 @@ d@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,60
 			    text-decoration: none;
 			    margin: 0 20px 25px 0;
 			}
+			.list-container a h1{
+				font-size: 2.2em;
+				font-weight: 600;
+				color: var(--orange);
+				opacity: 0;
+			}
+			.list-container a ion-icon, .list-container a img{
+				position: absolute;
+				width: 48px;
+				height: 48px;
+				color: var(--orange);
+			}
+			.list-container a img{
+				width: 48px;
+				height: 48px;
+			}
 			.home:hover{
 				transform: scale(1.2);
+				opacity: 1;
+				background: var(--white);
+			}
+			.list-containerjr a:hover h1{
+				opacity: 1;
+				z-index: 1;
+			}
+			.list-containerjr a:hover ion-icon, .list-containerjr a:hover img{
+				opacity: 0;
+				z-index: 0;
 			}
 			.circle-background{
 				width: 100%;
