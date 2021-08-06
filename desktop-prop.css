@@ -12,7 +12,7 @@
 }
 @font-face{
 	font-family: "SFPro";
-	src: url("root_explorer/SFProDisplay-Regular.ttf");
+	src: url("SFProDisplay-Regular.ttf");
 
 }
 ::-webkit-scrollbar {
@@ -100,13 +100,14 @@
 				font-size: 2.2em;
 				font-weight: 600;
 				color: var(--orange);
-				opacity: 0;
+				opacity: 1;
 			}
 			.list-container a ion-icon, .list-container a img{
 				position: absolute;
 				width: 48px;
 				height: 48px;
 				color: var(--orange);
+				opacity: 0;
 			}
 			.list-container a img{
 				width: 48px;
@@ -118,12 +119,12 @@
 				background: var(--white);
 			}
 			.list-containerjr a:hover h1{
-				opacity: 1;
-				z-index: 1;
-			}
-			.list-containerjr a:hover ion-icon, .list-containerjr a:hover img{
 				opacity: 0;
 				z-index: 0;
+			}
+			.list-containerjr a:hover ion-icon, .list-containerjr a:hover img{
+				opacity: 1;
+				z-index: 1;
 			}
 			.circle-background{
 				width: 100%;
