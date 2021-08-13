@@ -33,7 +33,7 @@
     }
 }
 .desktop-navigation::-webkit-scrollbar{
-	display: none
+	display: none;
 }
 @media  (min-width: 673px){/*desktop_devices*/
     body{
@@ -56,11 +56,11 @@
 		background: rgba(4, 17, 27, 1);
 	}
 			.list-container{
+				width: 100%;
 				height: 100vh;
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				flex-direction: row;
 			}
 			.list-container .title{
 				width: 1100px;
@@ -402,12 +402,35 @@
 				align-items: center;
 				justify-content: center;
 				height: 100vh;
-				position: relative;
 				margin: 20px 0 0 0;
+				position: relative;
 			}
+					.about h1{
+						position: relative;
+					}
 					.about ion-icon{
 						color: var(--black);
 						font-size: 25em;
 						margin: 20px 0 0 0;
+					}
+					.about .profile-image{
+						width: 175px;
+						height: 175px;
+						background-image: url("profile_picture.jpeg");
+						border-radius: 50%;
+						background-size: cover;
+						--web-kit-box-reflect: 2px 2px 2px 2px #000000;
+					}
+					.about .outline{
+						background: var(--white);
+						width: 250px;
+						height: 250px;
+						position: absolute;
+						top: 10px;
+						display: flex;
+						justify-content: flex-start;
+						align-items: center; 
+						left: calc(100% + 200px);
+						border-radius: 50%;
 					}
 }
