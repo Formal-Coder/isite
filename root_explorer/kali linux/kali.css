@@ -5,10 +5,11 @@
     font-family: Poppins, sans-serif;
     user-select: none;
     -webkit-user-drag: none;
+    outline: none;
 }
 body{
     min-height: 100vh;
-    background: url("https://raw.githubusercontent.com/dorianpro/kaliwallpapers/master/kali-linux-wallpaper-v7.png");
+    background: url("../icons/kali-linux-wallpaper.png"); /* linear-gradient(#595999, #125258)*/
     display: flex;
     background-size: cover;
     justify-content: center;
@@ -90,17 +91,60 @@ footer .left a .icon ion-icon{
     color: white;
     transition: 0.3s;
 }
-#main-btn{
+#apps-button{
     position: relative;
     top: 26px;
-    background-size: 48px;
     transition: 0.3s;
-    background-image: url(https://drasite.com/content/blog/posts/media/kali-2020.2/icons/kali-www.svg);
+    background-image: url("../icons/kali-apps-button.svg");
+    background-size: contain;
 }
-#main-btn:hover, #terminal:hover{
-    transform: scale(1.08) translateX(2px);
+#apps-button:hover, #terminal:hover{
+    transform: scale(1.08);
 }
 footer .left a .icon ion-icon:hover{
     font-size: 2.6em;
     color: white;
+}
+#right{
+    width: 350px;
+    height: 50px;
+    position: absolute;
+    bottom: 100px;
+    left: 25px;
+}
+#right hint{
+    font-size: 1.25em;
+    color: white;
+}
+
+.home-card{
+    width: 175px;
+    height: 80px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.4);
+    text-transform: capitalize;
+    justify-content: center;
+    left: 40px;
+    bottom: 170px;
+    opacity: 0.3;
+    transform: scale(1.12);
+    transition: 0.3s;
+}
+.home-card:hover,.home-card:focus{
+    opacity: 1;
+}
+.home-card a{
+    text-decoration: none;
+}
+.home-card home{
+    color: lightgreen;
+    font-size: 1.2em;
+}
+.home-card home:nth-child(2){
+    color: lightblue;
+    font-size: 1.75em;
 }
