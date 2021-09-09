@@ -45,7 +45,10 @@
     	--green: #00FFD4;
         width: 100%;
         min-height: 100%;
+        background-image: url("https://i.annihil.us/u/prod/marvel/images/OpenGraph-TW-1200x630.jpg") !important;
         background: var(--green);
+        background-size: contain;
+        background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
         font-family: Poppins, sans-serif;
@@ -54,35 +57,39 @@
     }
     body.active{
 		background: rgba(4, 17, 27, 1);
+        background-image: url("https://i.annihil.us/u/prod/marvel/images/OpenGraph-TW-1200x630.jpg") !important;
+        background-size: contain;
+        background-repeat: no-repeat;
 	}
-			.list-container{
+			.projects-container{
 				width: 100%;
 				height: 100vh;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 			}
-			.list-container .title{
-				width: 1100px;
-				height: 500px;
-				font-size: 5em;
-				text-align: center;
-				transform: rotate(270deg);
-				line-height: 50px;
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-				align-items: center;
-				background: var(--yellow);
-				color: var(--orange);
-			}
-			.list-containerjr{
+					.projects-container .title{
+						width: 1100px;
+						height: 500px;
+						font-size: 5em;
+						text-align: center;
+						transform: rotate(270deg);
+						line-height: 50px;
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: center;
+						align-items: center;
+						background: var(--yellow);
+						color: var(--orange);
+					}
+			.projects{
 			    display: flex;
 			    flex-wrap: wrap;
 			    align-items: center;
 			    justify-content: center;
 			}
-			.home{
+
+			.project{
 				width: 250px;
 			    height: 125px;
 			    background: var(--yellow);
@@ -96,40 +103,65 @@
 			    text-decoration: none;
 			    margin: 0 20px 25px 0;
 			}
-			.list-container a h1{
+			.projects-container a h1{
 				font-size: 2.2em;
 				font-weight: 600;
 				color: var(--orange);
 				opacity: 1;
 			}
-			.list-container a ion-icon, .list-container a img{
+			.projects-container a ion-icon, .projects-container a img{
 				position: absolute;
 				width: 48px;
 				height: 48px;
 				color: var(--orange);
 				opacity: 0;
 			}
-			.list-container a img{
+			.projects-container a img{
 				width: 48px;
 				height: 48px;
 			}
-			.home:hover{
+			.project:hover{
 				transform: scale(1.2);
 				opacity: 1;
 				background: var(--white);
 			}
-			.list-containerjr a:hover h1{
+			.projects a:hover h1{
 				opacity: 0;
 				z-index: 0;
 			}
-			.list-containerjr a:hover ion-icon, .list-containerjr a:hover img{
+			.projects a:hover ion-icon, .projects a:hover img{
 				opacity: 1;
 				z-index: 1;
 			}
+			.introduction{
+				height: 100vh;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+					.introduction .outer-introduction{
+						width: 100%;
+						height: 22vh;
+						background: rgba(255, 0, 0, 0.6);
+						position: absolute;
+						bottom: 3vh;
+					}
+					.introduction h1{
+						line-height: 75px;
+						word-spacing: 5px;
+						letter-spacing: 4px;
+						font-size: 2.9em; 
+						color: black;
+						display: flex;
+						position: relative;
+						top: 75vh;
+						text-transform: uppercase;
+					}
+
+			/*
 			.circle-background{
 				width: 100%;
 				font-family: Poppins, sans-serif;
-				z-index: -1000;
 				font-size: 1.2em;
 				position: relative;
 				font-weight: 200;
@@ -152,8 +184,8 @@
 						filter: blur(20px);
 					}
 					.circle-container .circle3{
-						width: 300px;
-						height: 300px;
+						width: 275px;
+						height: 310px;
 						background: var(--black);
 						position: absolute;
 						border-radius: 50%;
@@ -161,8 +193,9 @@
 						align-items: center;
 						flex-direction: column;
 						text-align: center;
-						right: 10%;
-						top: 5%;
+						left: 7%;
+						top: 15%;
+						transform: scaleY(0.9) rotateX(-30deg) rotateY(30deg);
 					}
 							.circle-container .circle3 h1{
 								position: relative;
@@ -191,7 +224,7 @@
 						border-radius: 50%;
 						left: 25%;
 						bottom: 10%;
-					}
+					}/*
 							.circle-container .circle4 h1{
 								position: relative;
 								top: 25%;
@@ -200,7 +233,7 @@
 								font-weight: 400;
 								font-size: 2em;
 								color: white;
-							}
+							}*/
 			.android-navigation, .hint{
 				display: none;
 			}
