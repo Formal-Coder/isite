@@ -1,260 +1,472 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="desktop-prop.css">
-    <link rel="stylesheet" href="mobile-prop.css">
-    <title>user Webpage</title>
-</head>
-<body>
-    <div class="introduction" id="introduction">
-        <div class="outer-introduction">
-        </div>
-            <h1>Thanks for checking out<br></h1>
-            <h1>Consider checking source on Github below</h1>
-    </div>
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+    outline: none;
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+}
+@font-face{
+	font-family: "SFPro";
+	src: url("root_explorer/SFProDisplay-Regular.ttf");
+
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+.scrollbar{
+}
+::-webkit-scrollbar-thumb {
+    /*border-radius: 10px;*/
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,1); 
+}
 
 
-    <!--<section class="circle-background" id="circle-background">
-        <div class="circle-container">
-            <div class="circle1"></div>
-            <div class="circle2"></div>
-            <div class="circle1"></div>
-            <div class="circle2"></div>
-            <div class="circle3">
-                <h1>Thanks for checking out</h1>
-                <div class="circle1"></div>
-                <div class="circle2"></div>    
-            </div>
-            <div class="circle1"></div>
-            <div class="circle2"></div>
-            <div class="circle1"></div>
-            <div class="circle4">
-                <h1>Consider checking me out on <a href="https://www.github.com/formal-coder">Github</a></h1>
-            </div>
-            <div class="circle2"></div>
-    </section>-->
+@media (min-width: 1370px){
+    body{	
+        display: none;
+    }
+}
+.desktop-navigation::-webkit-scrollbar{
+	display: none;
+}
+@media  (min-width: 673px){/*desktop_devices*/
+    body{
+    	--card: rgba(0,0,0,0.5);
+    	--white: rgba(255,255,255,0.6);
+    	--black: rgba(25, 25, 25, 0.6);
+    	--yellow: #F2E22E;
+    	--orange: #FF590D;
+    	--green: #00FFD4;
+        width: 100%;
+        min-height: 100%;
+        background-image: url("https://i.annihil.us/u/prod/marvel/images/OpenGraph-TW-1200x630.jpg") !important;
+        background: var(--green);
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        font-family: Poppins, sans-serif;
+        align-items: center;
+        overflow: hidden;
+    }
+    body.active{
+		background: rgba(4, 17, 27, 1);
+        background-image: url("https://i.annihil.us/u/prod/marvel/images/OpenGraph-TW-1200x630.jpg") !important;
+        background-size: contain;
+        background-repeat: no-repeat;
+	}
+			.projects-container{
+				width: 100%;
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+					.project-title{
+						width: 1100px;
+						height: 500px;
+						font-size: 5em;
+						text-align: center;
+						transform: rotate(270deg);
+						line-height: 50px;
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: center;
+						align-items: center;
+						background: var(--yellow);
+						color: var(--orange);
+					}
+					.project-title:hover h1, .project-title:hover h2{
+						background-clip: text;
+						color: transparent;
+					}
+					.projects{
+					    display: flex;
+					    flex-wrap: wrap;
+					    align-items: center;
+					    justify-content: center;
+					}
+					.project{
+						width: 250px;
+					    height: 125px;
+					    background: var(--yellow);
+					    color: white;
+					    font-family: Poppins, sans-serif;
+					    border-radius: 5px;
+					    transition: 0.3s;
+					    display: flex;
+					    justify-content: center;
+					    align-items: center;
+					    text-decoration: none;
+					    margin: 0 20px 25px 0;
+					}
 
+			
+			.projects-container a h1{
+				font-size: 2.2em;
+				font-weight: 600;
+				color: var(--orange);
+				opacity: 1;
+			}
+			.projects-container a ion-icon, .projects-container a img{
+				position: absolute;
+				width: 48px;
+				height: 48px;
+				color: var(--orange);
+				opacity: 0;
+			}
+			.projects-container a img{
+				width: 48px;
+				height: 48px;
+			}
+			.project:hover{
+				transform: scale(1.2);
+				opacity: 1;
+				background: var(--white);
+			}
+			.projects a:hover h1{
+				opacity: 0;
+				z-index: 0;
+			}
+			.projects a:hover ion-icon, .projects a:hover img{
+				opacity: 1;
+				z-index: 1;
+			}
+			.introduction{
+				width: 100%;
+				height: 100vh;
+			}
+					.introduction .outer-introduction{
+						width: 100%;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						background: rgba(255, 0, 0, 0.6);
+						position: relative;
+						top: 75vh;
+					}
+					.introduction h1{
+						line-height: 75px;
+						word-spacing: 5px;
+						letter-spacing: 4px;
+						font-size: 2.9em; 
+						color: black;
+						display: flex;
+						text-transform: uppercase;
+					}
 
-    <div class="projects-container" id="desktop">
-        <div class="title">
-            <h1>Desktop</h1><br>
-            <h2>Clones</h2>
-        </div>
-        <div class="projects">
-            <a class="project" href="root_explorer/windows/windows.html">
-                <ion-icon name="logo-windows"></ion-icon>
-                <h1>Windows</h1>
-            </a>
-            <a class="project" href="root_explorer/mac_webpage/mac_dark.html">
-                <h1>Mac</h1>
-                <ion-icon name="logo-apple"></ion-icon>
-            </a>
-            <a class="project" href="root_explorer/ubuntu%20linux/ubuntu.html">
-                <h1>Ubuntu</h1>
-                <img src="root_explorer/icons/ubuntu-logo.png">
-            </a>
-            <a class="project" href="root_explorer/kali%20linux/kali.html">
-                <h1>Kali Linux</h1>
-                <ion-icon name="logo-tux"></ion-icon>
-            </a>
-            <a class="project" href="https://github.com/Formal-Coder/isite/tree/main/root_explorer">
-                <h1>Source</h1>
-                <ion-icon name="logo-github"></ion-icon>
-            </a>
-        </div>
-    </div>
+			/*
+			.circle-background{
+				width: 100%;
+				font-family: Poppins, sans-serif;
+				font-size: 1.2em;
+				position: relative;
+				font-weight: 200;
+			}
+					.circle-container .circle1{
+						width: 60px;
+						height: 60px;
+						background: var(--black);
+						border-radius: 50%;
+						position: relative;
+						filter: blur(20px);
+					}
+					.circle-container .circle2{
+						width: 120px;
+						height: 120px;
+						background: var(--black);
+						border-radius: 50%;
+						position: relative;
+						left: 5%;
+						filter: blur(20px);
+					}
+					.circle-container .circle3{
+						width: 275px;
+						height: 310px;
+						background: var(--black);
+						position: absolute;
+						border-radius: 50%;
+						display: flex;
+						align-items: center;
+						flex-direction: column;
+						text-align: center;
+						left: 7%;
+						top: 15%;
+						transform: scaleY(0.9) rotateX(-30deg) rotateY(30deg);
+					}
+							.circle-container .circle3 h1{
+								position: relative;
+								margin: 5px;
+								font-size: 2em;
+								font-weight: 400;
+								top: 80px;
+								color: white;
+							}
+							.circle-container .circle3 .circle1{
+								position: relative;
+								left: -100%;
+								bottom: 10%;
+							}
+							.circle-container .circle3 .circle2{
+								position: relative;
+								left: 20%;
+								bottom: -90%;
+								filter: blur(10px);
+							}
+					.circle-container .circle4{
+						width: 350px;
+						height: 350px;
+						background: var(--black);
+						position: absolute;
+						border-radius: 50%;
+						left: 25%;
+						bottom: 10%;
+					}/*
+							.circle-container .circle4 h1{
+								position: relative;
+								top: 25%;
+								text-align: center;
+								flex-wrap: wrap;
+								font-weight: 400;
+								font-size: 2em;
+								color: white;
+							}*/
+			.android-navigation, .hint{
+				display: none;
+			}
+			.desktop-navigation{
+				width: 25%;
+				height: 50px;
+				background: rgba(255, 255, 255, 1);
+				box-sizing: initial;
+				position: fixed;
+				display: flex;
+				justify-content: center;
+				box-shadow: 0 8px 32px #000;
+				overflow-x: hidden;
+				transition: 0.5s;
+				z-index: 1;
+			}
+					.desktop-navigation:hover{
+						height: 560px;
+						background: white;
+						z-index: 2;
+					}
+					/*.desktop-navigation:hover ul li a{
+						transform: translateX(50%);
+					}*/
+					.desktop-navigation ul{
+						width: 100%;
+						position: absolute;
+						padding-top: 60px;
+						top: 0;
+						left: 0;
+					}
+							.desktop-navigation ul li{
+								width: 100%;
+								list-style: none;
+								position: relative;
+							}
+							.desktop-navigation ul li.active a .title,.desktop-navigation ul li.active a,.desktop-navigation ul li.active a .icon{
+								color: white;
+								background: rgba(0,0,0,1);
+							}
+									.desktop-navigation ul li a{
+										position: relative;
+										width: 100%;
+										display: flex;
+										text-decoration: none;
+										color: white;
+									}
+											.desktop-navigation ul li a .icon{
+												position: relative;
+												display: block;
+												min-width: 60px;
+												height: 50px;
+												line-height: 60px;
+												text-align: center;
+												top: 5px;
+												color: black;
+											}
+											.desktop-navigation ul li a .icon ion-icon{
+												font-size: 1.5em;
+											}
+											.desktop-navigation ul li a .title{
+												position: relative;
+												display: block;
+												padding-left: 10px;
+												height: 60px;
+												line-height: 60px;
+												white-space: normal;
+												color: black;
+											}
 
-    <div class="fmplayer" id="fmplayer">
-        <iframe class="u93" name="Framename" src="https://www.mainstreamnetwork.com/listen/player.asp?station=wndv_fm" scrolling="no"> </iframe>
-        <h1>U93.COM</h1>
-        <h2> live stream music</h2>
-    </div>
-    <div class="about" id="about">
-        <h1>Reach linkedin for now</h1>
-        <div class="linkedin">
-            <a href="https://www.linkedin.com/in/chakradharxd">
-                <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-        </div>
-    </div>
+					body.active .desktop-navigation:hover, body.active .desktop-navigation{
+						background: black;
+					}
+					body.active .desktop-navigation ul li a .title, body.active .desktop-navigation ul li a .icon ion-icon{
+						color: var(--orange);
+					}
+					body.active .desktop-navigation ul li.active a .title{
+						background: var(--orange);
+						color: var(--yellow);
+					}
+					body.active .desktop-navigation ul li.active a .icon ion-icon, body.active .desktop-navigation ul li.active a .icon{
+						background: var(--orange);
+						color: var(--yellow);
+					}
+					body.active .desktop-navigation ul li.active a{
+						background: var(--orange);
+						color: var(--yellow);
+					}
+					body.active .desktop-navigation h1{
+						color: var(--orange);
+					}
+					body.active .about, body.active .about ion-icon{
+						color: var(--orange);
+					}
+					.desktop-navigation ul li.active a{
+						color: #333;
+					}
+			.contact-form{
+				width: 100%;
+				height: 100vh;
+				background: var(--white);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-family: SFPro;
+			}
+					.contact{
+						width: 600px;
+						height: 600px;
+						border-radius: 20px;
+						background: var(--orange);
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						overflow: hidden;
+						text-align: center;
+						transition: 0.7s;
+					}
+					#form{
+						color: white;
+						display: flex;
+						flex-wrap: wrap;
+						font-size: 22px;
+						line-height: 40px;
+					}
+					#input{
+						width: 450px; 
+						height: 25px;
+						border-radius: 4px;
+						border: none;
+						font-family: SFPro;
+						text-align: center;
+						resize: none;
+						font-size: 1em;
+						line-height: 25px;
+					}
+					textarea:nth-child(8){
+						min-height: 200px !important;
+						display: flex;
+						flex-wrap: wrap;
+						resize: vertical !important;
+					}
+					#submit-btn{
+						width: 80px;
+						height: 35px;
+						outline: none;
+						font-size: 1.1em;
+						font-weight: 700;
+						position: relative;
+						top: 25px;
+						cursor: pointer;
+						border-radius: 4px;
+						background: #FF69B4;
+						border: none;
+					}
+					.Download{
+						width: 200px;
+						height: 150px;
+						position: relative;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						margin: 0 0 0 250px;
+						border-radius: 20px;
+						background: var(--yellow);
+					}
+					.file-name{
+						font-size: 1em;
+						margin: 0 0 20px 0;
+					}
+			.fmplayer{
+				width: 100%;
+				height: 100vh;
+				background: var(--white);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+					.u93{
+						width: 800px;
+						height: 400px;
+						border-radius: 5px;
 
-    <section class="contact-form">
-        <div class="contact" id="contact">
-            <form action="contact-form.php" method="post">
-                <div class="form-conatiner">
-                    <label id="form" for="name">Name</label>
-                    <textarea id="input" type="text" name="name" placeholder="Enter your name" required></textarea>
-                    <label id="form" for="email">Email</label>
-                    <textarea id="input" type="email" name="email" placeholder="Enter your email" required></textarea>
-                    <label id="form" for="number">Contact Number</label>
-                    <input id="input" type="number" name="Number" placeholder="Enter your number">
-                    <label id="form" for="message">Message</label>
-                    <textarea id="input" type="text" name="Message" placeholder="Enter Message Here" required></textarea>
-                    <button id="submit-btn" value="submit">Submit</button>
-                </div>
-            </form>
-        </div>
-        <div class="Download">
-            <h1 class="file-name">no file selected<hr></h1>
-            <a href="../photos.zip">Download</a>
-        </div>
-    </section>    
-    
-    <div class="desktop-navigation">
-	    <div class="nav">
-            <h1>Menu</h1><hr>
+					}
+					.fmplayer h1{
+						margin: 20px;
+						font-size: 3.5em;
+						color: var(--orange);
 
-		    <ul>
-		        <li class="list active">
-		            <a href="#introduction">
-		                <span class="icon"><ion-icon name="home"></ion-icon></ion-icon></span>
-		                <span class="title">Home</span>
-		            </a>
-		        </li>
-		        <li class="list">
-		            <a href="#fmplayer">
-		                <span class="icon"><ion-icon name="film-outline"></ion-icon></span>
-		                <span class="title">FM PLAYER</span>
-		            </a>
-		        </li>
-		        <li class="list">
-		            <a href="#desktop">
-		                <span class="icon"><ion-icon name="options-outline"></ion-icon></span>
-		                <span class="title">Projects</span>
-		            </a>
-		        </li>
-		        <li class="list">
-		            <a href="#contact">
-		                <span class="icon"><ion-icon name="information-circle-outline"></span>
-		                <span class="title">Contact Us</span>
-		            </a>
-		        </li>
-				<li class="list">
-		            <a href="https://www.google.com">
-		                <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
-		                <span class="title">Signout</span>
-		            </a>
-		        </li>
-                <li class="list">
-                    <a href="">
-                        <span class="title"></span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a href="#godark" class="desktop_darkTheme">
-                        <span class="icon"><ion-icon name="contrast"></ion-icon></span>
-                        <span class="title">Go dark</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a href="#about">
-                        <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
-                        <span class="title">About Me</span>
-                    </a>
-                </li>
-		    </ul>
-		</div>
-	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="android-navigation">
-        <ul>
-            <li class="list active">
-                <a href="#home">
-                    <span class="icon"><ion-icon name="home"></ion-icon></ion-icon></span>
-                    <span class="title">Home</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="https://www.linkedin.com/in/chakradharxd">
-                    <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
-                    <span class="title">Profile</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="root_explorer/windows/windows.html">
-                    <span class="icon"><ion-icon name="logo-microsoft"></ion-icon></span>
-                    <span class="title">Windows</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="root_explorer/mac_webpage/mac.html">
-                    <span class="icon"><ion-icon name="logo-apple"></ion-icon></span>
-                    <span class="title">Mac</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="root_explorer/mac_webpage/mac_dark.html">
-                    <span class="icon"><ion-icon name="logo-apple"></ion-icon></span>
-                    <span class="title">Mac Dark</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="https://github.com/Formal-Coder/isite/tree/main/root_explorer">
-                    <span class="icon"><ion-icon name="logo-github"></ion-icon></span>
-                    <span class="title">Source Code</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="root_explorer/kali%20linux/kali.html">
-                    <span class="icon"><ion-icon name="logo-tux"></ion-icon></span>
-                    <span class="title">Kali linux</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="root_explorer/ubuntu%20linux/ubuntu.html">
-                    <span class="icon"><ion-icon name="logo-tux"></ion-icon></span>
-                    <span class="title">Ubuntu linux</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="#godark" class="android_darkTheme">
-                    <span class="icon"><ion-icon name="contrast"></ion-icon></span>
-                    <span class="title">Go dark</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div class="hint"><h4>Hint: Actual magic happens in desktop</h4></div>
-
-
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    
-    <script>
-        let list = document.querySelectorAll('.list');
-        for (let i=0;i<list.length;i++){
-            list[i].onclick = function(){
-                let j = 0;
-                    while (j<list.length){
-                    list[j++].className = 'list';
-                }
-                list[i].className = 'list active';
-            }
-        }
-
-        let body = document.querySelector('body');
-        let darkTheme1 = document.querySelector(".android_darkTheme");
-        let darkTheme2 = document.querySelector(".desktop_darkTheme");
-        darkTheme1.onclick = function(){
-            body.classList.toggle('active')
-        }
-        darkTheme2.onclick = function(){
-            body.classList.toggle('active')
-        }
-    </script>
-</body>
-</html>
+					}
+					.fmplayer h2{
+						margin: 20px;
+						color: black;
+					}
+			.about{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+				margin: 20px 0 0 0;
+				position: relative;
+			}
+					.about h1{
+						position: relative;
+					}
+					.about ion-icon{
+						color: var(--black);
+						font-size: 25em;
+						margin: 20px 0 0 0;
+					}
+					.about .profile-image{
+						width: 175px;
+						height: 175px;
+						background-image: url("profile_picture.jpeg");
+						border-radius: 50%;
+						background-size: cover;
+						--web-kit-box-reflect: 2px 2px 2px 2px #000000;
+					}
+					.about .outline{
+						background: var(--white);
+						width: 250px;
+						height: 250px;
+						position: absolute;
+						top: 10px;
+						display: flex;
+						justify-content: flex-start;
+						align-items: center; 
+						left: calc(100% + 200px);
+						border-radius: 50%;
+					}
+}
