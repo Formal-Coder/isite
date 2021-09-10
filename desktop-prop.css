@@ -42,6 +42,7 @@
     	--black: rgba(25, 25, 25, 0.6);
     	--yellow: #F2E22E;
     	--orange: #FF590D;
+    	--red: red;
     	--green: #00FFD4;
         width: 100%;
         min-height: 100%;
@@ -61,14 +62,14 @@
         background-size: contain;
         background-repeat: no-repeat;
 	}
-			.projects-container{
+			.project-container{
 				width: 100%;
 				height: 100vh;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 			}
-					.projects-container .title{
+					.project-title{
 						width: 1100px;
 						height: 500px;
 						font-size: 5em;
@@ -82,80 +83,77 @@
 						background: var(--yellow);
 						color: var(--orange);
 					}
-			.projects{
-			    display: flex;
-			    flex-wrap: wrap;
-			    align-items: center;
-			    justify-content: center;
-			}
+					.projects{
+					    display: flex;
+					    flex-wrap: wrap;
+					    align-items: center;
+					    justify-content: center;
+					}
+							.project{
+								width: 250px;
+							    height: 125px;
+							    background: var(--yellow);
+							    color: white;
+							    font-family: Poppins, sans-serif;
+							    border-radius: 5px;
+							    transition: 0.3s;
+							    display: flex;
+							    justify-content: center;
+							    align-items: center;
+							    text-decoration: none;
+							    margin: 0 20px 25px 0;
+							}
+							.project:hover{
+								transform: scale(1.2);
+								opacity: 1;
+								background: var(--white);
+							}
+					.projects a h1{
+						font-size: 2.2em;
+						font-weight: 600;
+						color: var(--orange);
+						opacity: 1;
+					}
+					.projects a ion-icon, .projects a img{
+						position: absolute;
+						width: 48px;
+						height: 48px;
+						color: var(--orange);
+						opacity: 0;
+					}
+					.projects a img{
+						width: 48px;
+						height: 48px;
+					}
+					.projects a:hover h1{
+						opacity: 0;
+						z-index: 0;
+					}
+					.projects a:hover ion-icon, .projects a:hover img{
+						opacity: 1;
+						z-index: 1;
+					}
 
-			.project{
-				width: 250px;
-			    height: 125px;
-			    background: var(--yellow);
-			    color: white;
-			    font-family: Poppins, sans-serif;
-			    border-radius: 5px;
-			    transition: 0.3s;
-			    display: flex;
-			    justify-content: center;
-			    align-items: center;
-			    text-decoration: none;
-			    margin: 0 20px 25px 0;
-			}
-			.projects-container a h1{
-				font-size: 2.2em;
-				font-weight: 600;
-				color: var(--orange);
-				opacity: 1;
-			}
-			.projects-container a ion-icon, .projects-container a img{
-				position: absolute;
-				width: 48px;
-				height: 48px;
-				color: var(--orange);
-				opacity: 0;
-			}
-			.projects-container a img{
-				width: 48px;
-				height: 48px;
-			}
-			.project:hover{
-				transform: scale(1.2);
-				opacity: 1;
-				background: var(--white);
-			}
-			.projects a:hover h1{
-				opacity: 0;
-				z-index: 0;
-			}
-			.projects a:hover ion-icon, .projects a:hover img{
-				opacity: 1;
-				z-index: 1;
-			}
+			
 			.introduction{
+				width: 100%;
 				height: 100vh;
 				display: flex;
 				flex-direction: column;
-				align-items: center;
+				text-align: center;
 			}
-					.introduction .outer-introduction{
-						width: 100%;
-						height: 22vh;
-						background: rgba(255, 0, 0, 0.6);
-						position: absolute;
-						bottom: 3vh;
-					}
 					.introduction h1{
+						top: 75vh;
+						position: relative;
 						line-height: 75px;
 						word-spacing: 5px;
 						letter-spacing: 4px;
-						font-size: 2.9em; 
-						color: black;
-						display: flex;
-						position: relative;
-						top: 75vh;
+						font-size: 2.9em;
 						text-transform: capitalize;
+						background-clip: text;
+						-webkit-background-clip: text;
+						background-image: url("https://unsplash.it/1360");
+						color: transparent;
 					}
 
 			/*
@@ -435,7 +433,6 @@
 				align-items: center;
 				justify-content: center;
 				height: 100vh;
-				margin: 20px 0 0 0;
 				position: relative;
 			}
 					.about h1{
@@ -444,7 +441,6 @@
 					.about ion-icon{
 						color: var(--black);
 						font-size: 25em;
-						margin: 20px 0 0 0;
 					}
 					.about .profile-image{
 						width: 175px;
