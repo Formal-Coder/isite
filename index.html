@@ -237,7 +237,14 @@
             </li>
         </ul>
     </div>
-    <div class="hint"><h4>Hint: Actual magic happens in desktop</h4></div>
+
+    <div class="menu-expand-toggle">
+        <span class="icon"><ion-icon name="archive-outline"></ion-icon></span>
+    </div>
+
+    <div class="hint"><h4>Actual development-progess is done in desktop<br>
+        Base resolutions for Desktop: 1360*768(HD)<br>
+    Base resolutions for Mobile: 2340*1080(FHD+)</h4></div>
 
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -256,6 +263,8 @@
         }
 
         let body = document.querySelector('body');
+        let androidNavigation = document.querySelector(".android-navigation");
+        let expanderToggle = document.querySelector('.menu-expand-toggle');
         let darkTheme1 = document.querySelector(".android_darkTheme");
         let darkTheme2 = document.querySelector(".desktop_darkTheme");
         darkTheme1.onclick = function(){
@@ -263,6 +272,10 @@
         }
         darkTheme2.onclick = function(){
             body.classList.toggle('active')
+        }
+        expanderToggle.onclick = function(){
+            androidNavigation.classList.toggle('expand')
+            expanderToggle.classList.toggle('expand')
         }
     </script>
 </body>
