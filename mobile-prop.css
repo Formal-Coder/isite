@@ -31,7 +31,9 @@
     body{
         width: 100%;
         height: 100%;
-        background: #10a930;
+        --green : #00d4ff;
+        --white7 : rgba(255,255,255,0.7);
+        background: var(--green);
         display: flex;
         font-family: Poppins, sans-serif;
         justify-content: center;
@@ -41,85 +43,116 @@
     body.active{
         background: rgba(4, 7, 7, 1.0);
     }
-		.android-navigation{
-			width: 70px;
-			height: 95%;
-			background: rgba(51, 51, 51, 0.3);
-			box-sizing: initial;
-			position: fixed;
-			top: 10px;
-			left: 5%;
-			bottom: 20px;
-			border-left: 5px solid rgba(80, 80, 80, 0.4);
-			border-radius: 10px;
-			box-shadow: 0 8px 32px #000;
-			overflow-x: hidden;
-			transition: width 0.5s;
-			}
-			.android-navigation:hover{
-				width: 275px;
-				background: rgba(51, 51, 51, 0.8);
-				z-index: 2;
-			}
-		    .android-navigation ul{
-		        width: 100%;
-		        position: absolute;
-		        padding-left: 5px;
-		        padding-top: 20px;
-		        top: 0;
-		        left: 0;
-		    }
-				    .android-navigation ul li{
-				        width: 100%;
-				        list-style: none;
-				        position: relative;
-				    }
-				    .android-navigation ul li a{
-				        position: relative;
-				        display: block;
-				        width: 100%;
-				        display: flex;
-				        text-decoration: none;
-				        color: white;
-				    }
-						    .android-navigation ul li a .icon{
-						        position: relative;
-						        display: block;
-						        min-width: 60px;
-						        height: 60px;
-						        line-height: 60px;
-						        text-align: center;
-						        top: 5px;
-						    }
-						    .android-navigation ul li a .icon ion-icon{
-						        font-size: 1.5em;
-						    }
-						    .android-navigation ul li a .title{
-						        position: relative;
-						        display: block;
-						        padding-left: 10px;
-						        height: 60px;
-						        line-height: 60px;
-						        white-space: normal;
-						    }
-						    .android-navigation ul li.active{
-						        background: #fff;
-						        border-top-left-radius: 20px;
-						        border-bottom-left-radius: 20px;
+			.android-navigation{
+				width: 70px;
+				max-height: 700px;
+				background: rgba(51, 51, 51, 0.3);
+				box-sizing: initial;
+				position: fixed;
+				top: 25px;
+				left: 5%;
+				bottom: 20px;
+				border-left: 5px solid rgba(80, 80, 80, 0.4);
+				border-radius: 10px;
+				box-shadow: 0 8px 32px #000;
+				overflow-x: hidden;
+				transition: width 0.5s;
+				}
 
-						    }
-						    .android-navigation ul li.active a{
-						        color: #333;
-						    }
+				.android-navigation.expand{
+					width: 275px;
+					background: rgba(51, 51, 51, 0.8);
+					z-index: 2;
+				}
+					    .android-navigation ul{
+					        width: 100%;
+					        position: absolute;
+					        padding-left: 5px;
+					        padding-top: 20px;
+					        top: 0;
+					        left: 0;
+					    }
+							    .android-navigation ul li{
+							        width: 100%;
+							        list-style: none;
+							        position: relative;
+							    }
+							    .android-navigation ul li a{
+							        position: relative;
+							        display: block;
+							        width: 100%;
+							        display: flex;
+							        text-decoration: none;
+							        color: white;
+							    }
+									    .android-navigation ul li a .icon{
+									        position: relative;
+									        display: block;
+									        min-width: 60px;
+									        height: 60px;
+									        line-height: 60px;
+									        text-align: center;
+									        top: 5px;
+									    }
+									    .android-navigation ul li a .icon ion-icon{
+									        font-size: 1.5em;
+									    }
+									    .android-navigation ul li a .title{
+									        position: relative;
+									        display: block;
+									        padding-left: 10px;
+									        height: 60px;
+									        line-height: 60px;
+									        white-space: normal;
+									    }
+									    .android-navigation ul li.active{
+									        background: #fff;
+									        border-top-left-radius: 20px;
+									        border-bottom-left-radius: 20px;
+
+									    }
+									    .android-navigation ul li.active a{
+									        color: #333;
+									    }
 			.desktop-navigation, .introduction, .project-container, .contact-form, .fmplayer, .about{
 				display: none;
 			}
+			.menu-expand-toggle{
+					height:70px;
+					width: 70px;
+					background: rgba(51, 51, 51, 0.3);
+					border-left: 5px solid rgba(80, 80, 80, 0.4);
+					box-shadow: 0 8px 32px #000;
+					border-radius: 10px;
+					position: absolute;
+					top: 750px;
+					left: 6%;
+					cursor: pointer;
+				}
+					    .menu-expand-toggle .icon{
+					    	position: relative;
+					    	display: flex;
+					        justify-content: center;
+					        top: 20px;
+					    }
+					    .menu-expand-toggle .icon ion-icon{
+					        font-size: 2.25em;
+					        transform: rotate(270deg);
+					        color: white;
+					    }
+					    .menu-expand-toggle.expand .icon ion-icon{
+					        transform: rotate(90deg);
+						}
 			.hint{
+				text-align: center;
 				height: content;
-				width: content;
+				width: 100%;
 				position: absolute;
-				bottom: 30%;
-				left: 30%;
+				bottom: 40px;
+				background: rgba(255,255,255,0.8);
+				border-radius: 2px;
 				color: black;
+				font-size: 1em;
+				z-index: -1;
 			}
 }
