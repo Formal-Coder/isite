@@ -46,10 +46,7 @@
     	--green: #00FFD4;
         width: 100%;
         min-height: 100%;
-        background-image: url("https://i.annihil.us/u/prod/marvel/images/OpenGraph-TW-1200x630.jpg") !important;
-        background: var(--green);
-        background-size: contain;
-        background-repeat: no-repeat;
+        
         display: flex;
         flex-direction: column;
         font-family: Poppins, sans-serif;
@@ -141,6 +138,9 @@
 				display: flex;
 				flex-direction: column;
 				text-align: center;
+				background-image: url("https://i.annihil.us/u/prod/marvel/images/OpenGraph-TW-1200x630.jpg");
+				background-repeat: no-repeat;
+				background-size: cover; 
 			}
 					.introduction h1{
 						top: 75vh;
@@ -216,10 +216,10 @@
 							}
 					.circle-container .circle4{
 						width: 350px;
+						border-radius: 50%;
 						height: 350px;
 						background: var(--black);
 						position: absolute;
-						border-radius: 50%;
 						left: 25%;
 						bottom: 10%;
 					}/*
@@ -421,45 +421,110 @@
 						margin: 20px;
 						font-size: 3.5em;
 						color: var(--orange);
-
 					}
 					.fmplayer h2{
 						margin: 20px;
 						color: black;
 					}
 			.about{
+				width: 100%;
+				height: 100vh;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
-				height: 100vh;
-				position: relative;
 			}
-					.about h1{
-						position: relative;
+					.about .aboutme{
+						display: flex;
+						justify-content: space-between;
 					}
-					.about ion-icon{
+					.about .profile-links{
+						width: 100%;
+						height: content;
+						background: var(--green);
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						position: relative;
+						top: 5em;
+					}
+					.about .profile-links ion-icon{
 						color: var(--black);
-						font-size: 25em;
+						font-size: 3em;
 					}
 					.about .profile-image{
-						width: 175px;
-						height: 175px;
-						background-image: url("profile_picture.jpeg");
+						width: 7em;
+						height: 7em;
+						background: lightgreen;
+						background-image: url(https://media-exp1.licdn.com/dms/image/D5603AQFyTfl1zjYOUg/profile-displayphoto-shrink_100_100/0/1630733315841?e=1637193600&v=beta&t=MaKA-8mjOUi9RoizGsH1hEcCiqKzqWcWogH8zCeENws);
 						border-radius: 50%;
 						background-size: cover;
 						--web-kit-box-reflect: 2px 2px 2px 2px #000000;
 					}
-					.about .outline{
-						background: var(--white);
-						width: 250px;
-						height: 250px;
-						position: absolute;
-						top: 10px;
+					.aboutme{
 						display: flex;
-						justify-content: flex-start;
-						align-items: center; 
-						left: calc(100% + 200px);
-						border-radius: 50%;
 					}
+
+			.experiments{
+				width: 100%;
+				height: 90vh;
+				position: relative;
+				background: var(--black);
+			}
+			.element1{
+				width: 40vw;
+				height: 40vw;
+				background: var(--white);
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+			.element1 code{
+				background: var(--black);
+				color: white;
+			}
+			.element1 code textarea{
+				width: 20em;
+				height: 2em;
+				resize: none;
+			}
+			.element1 .visual{
+				width: 20rem;
+				height: 20rem;
+				margin: 15px;
+			}
+			.element1 .visual .sea{
+				width: 29rem;
+				height: 29rem;
+				background: lightblue;
+				overflow: hidden;
+			}
+			.element1 .visual .sea .sun{
+				width: 50px;
+				height: 50px;
+				background: orange;
+				border-radius: 50%;
+				margin: 40px;
+			}
+			.element1 .visual .sea .water-flow{
+				width: 50em;
+				height: 50em;
+				background: blue;
+				border-radius: 30% 40% 45% 35%;
+				position: relative;
+				top: 35vh;
+				right: 30%;
+				animation-name: water-splash;
+				animation-iteration-count: infinite;
+				animation-duration: 15s;
+			}
+			@keyframes water-splash{
+				0%{
+					transform: rotate(0deg);
+				}
+				100%{
+					transform: rotate(360deg);
+				}
+			}
 }
