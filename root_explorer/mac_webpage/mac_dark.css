@@ -117,13 +117,8 @@ section a .icon ion-icon{
 body.active{
     background: #4c477d;
 }
-.navigation.active:hover{
-    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.79);
-    transform: scale(1.17);
-}
-.navigation.active:hover a .icon ion-icon{
-    color: black;
-    font-size: 2em;
+.navigation.active a .icon ion-icon:hover{
+    font-size: 3em;
 }
 header.active:hover{
     background: rgba(255, 255, 255, 0.8);
