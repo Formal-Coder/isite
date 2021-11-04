@@ -19,9 +19,10 @@ header{
 	justify-content: center;
 }
 .subsLabs{
-	columns: 2;
+	columns: 10vh;
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 .subsLabs subs, .subsLabs labs{
 	font-size: 1em;
