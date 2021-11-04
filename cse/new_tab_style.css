@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+
+*{
+
+}
+html{
+	--primary-link-and-main-line-color: rgba(0,50,200,1);
+}
+body{
+	width: 100%;
+	height: content;
+	font-family: Poppins;
+	overflow-x: hidden;
+}
+header{
+	color: var(--primary-link-and-main-line-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.subsLabs{
+	columns: 2;
+	display: flex;
+	justify-content: space-between;
+}
+.subsLabs subs, .subsLabs labs{
+	font-size: 1em;
+	font-weight: lighter;
+}
+.timeTable{
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.timeTable div{
+	background: url("assets/CSE'A'_TimeTable.jpeg") no-repeat;
+	width: 65em;
+	height: 30em;
+	background-size: contain;
+}
+.cwlor, .subsLabs, .timeTable, .extra-files{
+	margin: 1% 1% 10% 1%;
+}
+#link{
+	color: var(--primary-link-and-main-line-color);
+}
+footer{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: black;
+}
+footer *{
+	color: white;
+}
