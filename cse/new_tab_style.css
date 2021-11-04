@@ -19,7 +19,7 @@ header{
 	justify-content: center;
 }
 .subsLabs{
-	columns: 10vh;
+	columns: 10vw;
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
