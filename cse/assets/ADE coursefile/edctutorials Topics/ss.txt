@@ -1,0 +1,9 @@
+http://www.radio-electronics.com/info/circuits/fet-field-effect-transistor/common-drain-source-follower-circuit-amplifier.php
+question 11a
+http://www.electronics-tutorials.ws/transistor/tran_5.html question 10a
+http://www.onmyphd.com/?p=small.signal.model question 10b
+https://www.elprocus.com/introduction-to-uni-junction-transistor-construction-and-operation/ question 6a
+http://www.iue.tuwien.ac.at/phd/stockinger/node14.html question 6b
+http://ecetutorials.com/analog-electronics/early-effect-or-base-width-modulation/ question6b
+http://www.electronics-tutorials.ws/diode/diode_6.html question5
+https://en.wikipedia.org/wiki/Depletion_and_enhancement_modes question 11b
