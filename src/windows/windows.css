@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+body{
+    min-height: 100vh;
+    background: url("https://wallpapersflix.com/wp-content/uploads/2021/06/Windows-11-Wallpaper-1024x576.jpg");
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.folders{
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    text-decoration: none;
+    overflow: hidden;
+}
+.folders ul li a .icon ion-icon{
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 3.2em;
+}
+.folders ul li a{
+    position: relative;
+    text-decoration: none;
+}
+.folders ul li a i{
+    height: 10px;
+    font-style: normal;
+    position: relative;
+    font-size: 12px;
+    right: 48px;
+    top: 10px;
+    color: white;
+}
+
+section a .icon ion-icon{
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 10em;
+    position: relative;
+    bottom: 20px;
+    cursor: default;
+    transition: 0.5s;
+}
+section a .icon ion-icon:hover{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12em;
+}
+
+footer{
+    bottom: 10px;
+    width: 99%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+}
+footer .center{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .center a .icon{
+    width: 60px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+footer .center a .icon ion-icon{
+    font-size: 2.2em;
+    color: black;
+    transition: 0.3s;
+}
+footer .center a .icon ion-icon:hover{
+    font-size: 2.6em;
+    color: white;
+}
